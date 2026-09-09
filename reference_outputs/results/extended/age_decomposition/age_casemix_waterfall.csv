@@ -1,0 +1,27 @@
+dataset,comparison,step,n_features,group_coef_logodds,pct_of_raw_gap_explained
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,raw (group only),1,-1.7576863550774753,-0.0
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,demographics,3,-1.6634966612617141,5.358731581642703
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,comorbidities,12,-1.2678534168842466,27.86805147449858
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,behavioral,17,-1.265375856389145,28.009007253551225
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,access,20,-1.254579738051201,28.623230508272247
+Diabetes-130 (readmission),under_30_vs_60_plus,raw (group only),1,0.01410462569914741,0.0
+Diabetes-130 (readmission),under_30_vs_60_plus,demographics,6,0.031275184509020074,-121.73707531218346
+Diabetes-130 (readmission),under_30_vs_60_plus,comorbidities,7,0.15763847563880562,-1017.6367172106841
+Diabetes-130 (readmission),under_30_vs_60_plus,utilization,14,-0.16011372864835394,1235.1859458279168
+Diabetes-130 (readmission),under_30_vs_60_plus,medications,41,-0.16743753229567818,1287.1107810099447
+Diabetes-130 (readmission),under_30_vs_60_plus,administrative,44,-0.1614518483350285,1244.6730439985222
+BRFSS 2022 (heart disease),18_44_vs_65_plus,raw (group only),1,-2.661624750415046,-0.0
+BRFSS 2022 (heart disease),18_44_vs_65_plus,demographics,8,-2.6131218155324167,1.8223055250393854
+BRFSS 2022 (heart disease),18_44_vs_65_plus,comorbidities,20,-2.0884205352637033,21.53587635003615
+BRFSS 2022 (heart disease),18_44_vs_65_plus,behavioral,23,-2.0622456988125264,22.5192920793607
+BRFSS 2022 (heart disease),18_44_vs_65_plus,access,25,-2.1070584186654866,20.835631756996616
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,raw (group only),1,-2.400328306574607,-0.0
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,demographics,8,-2.4351516888757616,-1.4507758045335613
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,comorbidities,11,-2.054290605454444,14.416265482198847
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,behavioral,13,-2.0294716061063496,15.450249011873264
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,access,14,-1.9999372878229924,16.68067729130743
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,raw (group only),1,-3.999986169515131,-0.0
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,demographics,13,-3.8863336574095335,2.841322626857339
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,comorbidities,16,-3.272815416506242,18.17933168246517
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,behavioral,18,-3.279552087728042,18.010914319596722
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,access,19,-3.1866785433573526,20.332760956930155

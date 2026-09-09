@@ -1,0 +1,11 @@
+dataset,error_type,inference_protocol,raw_gap,g_computation_gap,ipw_gap,attenuation_pct,n_a,n_b,note
+CDC Diabetes (BRFSS 2015),FN_among_positives,exploratory_point_estimate_no_confidence_interval,0.033024155333348404,-0.004359927120962587,-0.011190663989163324,113.20223659607079,5658,6335,
+CDC Diabetes (BRFSS 2015),FP_among_negatives,exploratory_point_estimate_no_confidence_interval,0.01721412682304091,0.009274307760797629,-0.000856303640387801,46.12385596936537,27953,36158,
+Diabetes-130 (readmission),FN_among_positives,exploratory_point_estimate_no_confidence_interval,0.0485721372172373,0.008836818045113326,0.005490575155408017,81.80681651789183,1486,1807,
+Diabetes-130 (readmission),FP_among_negatives,exploratory_point_estimate_no_confidence_interval,-0.047857085777139985,-0.021986730547061795,-0.02293332573871143,54.05752316501426,12441,14446,
+BRFSS 2022 (heart disease),FN_among_positives,exploratory_point_estimate_no_confidence_interval,0.023935491863608854,-0.021712134536013977,-0.021500698709974064,190.71104391643928,6948,4977,
+BRFSS 2022 (heart disease),FP_among_negatives,exploratory_point_estimate_no_confidence_interval,-0.03348923186623459,0.023914958224172833,0.031142960363846228,171.41088908726215,55036,65073,
+NHANES 2017-18 (diabetes),FN_among_positives,exploratory_point_estimate_no_confidence_interval,-0.0005622489959839216,-0.003653223869421851,-0.01260195705091055,-549.7519596329026,166,150,
+NHANES 2017-18 (diabetes),FP_among_negatives,exploratory_point_estimate_no_confidence_interval,-0.04382470119521914,-0.005742813962903992,-0.0075052632957557375,86.89594268464636,687,753,
+CCHS 2019-20 (diabetes),FN_among_positives,exploratory_point_estimate_no_confidence_interval,0.02401536983669547,0.003858913438517103,-0.005970496902052813,83.93148444201478,1560,1388,
+CCHS 2019-20 (diabetes),FP_among_negatives,exploratory_point_estimate_no_confidence_interval,0.001092976302922044,0.0015623817976482823,0.0010172256124276746,-42.947453981508545,11794,15004,

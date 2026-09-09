@@ -1,0 +1,16 @@
+dataset,comparison,metric,bayes_adj_gap,ipw_adj_gap,ipw_ci_low,ipw_ci_high,inference_protocol,absolute_diff
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,ppv,0.2110708487943707,0.21107084879437066,,,exploratory_point_estimate_no_confidence_interval,5.551115123125783e-17
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,npv,-0.017950238547683628,-0.01795023854768374,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+CDC Diabetes (BRFSS 2015),18_44_vs_65_plus,predicted_positive_rate,-0.3008782102454042,-0.30087821024540434,,,exploratory_point_estimate_no_confidence_interval,1.6653345369377348e-16
+Diabetes-130 (readmission),under_30_vs_60_plus,ppv,0.10569784276354033,0.10569784276354025,,,exploratory_point_estimate_no_confidence_interval,8.326672684688674e-17
+Diabetes-130 (readmission),under_30_vs_60_plus,npv,0.028096600918525394,0.028096600918525505,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+Diabetes-130 (readmission),under_30_vs_60_plus,predicted_positive_rate,-0.10605705700437501,-0.10605705700437501,,,exploratory_point_estimate_no_confidence_interval,0.0
+BRFSS 2022 (heart disease),18_44_vs_65_plus,ppv,0.20813936669432848,0.20813936669432842,,,exploratory_point_estimate_no_confidence_interval,5.551115123125783e-17
+BRFSS 2022 (heart disease),18_44_vs_65_plus,npv,-0.0232066223174473,-0.0232066223174473,,,exploratory_point_estimate_no_confidence_interval,0.0
+BRFSS 2022 (heart disease),18_44_vs_65_plus,predicted_positive_rate,-0.42560387394242327,-0.4256038739424231,,,exploratory_point_estimate_no_confidence_interval,1.6653345369377348e-16
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,ppv,0.2237790894302663,0.22377908943026625,,,exploratory_point_estimate_no_confidence_interval,5.551115123125783e-17
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,npv,-0.004457136647293636,-0.004457136647293636,,,exploratory_point_estimate_no_confidence_interval,0.0
+NHANES 2017-18 (diabetes),under_45_vs_65_plus,predicted_positive_rate,-0.4662526233494851,-0.4662526233494849,,,exploratory_point_estimate_no_confidence_interval,1.6653345369377348e-16
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,ppv,0.2892816796343736,0.2892816796343738,,,exploratory_point_estimate_no_confidence_interval,1.6653345369377348e-16
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,npv,-0.03313450562526876,-0.03313450562526876,,,exploratory_point_estimate_no_confidence_interval,0.0
+CCHS 2019-20 (diabetes),18_34_vs_65_plus,predicted_positive_rate,-0.4432523766257184,-0.4432523766257184,,,exploratory_point_estimate_no_confidence_interval,0.0

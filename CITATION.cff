@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software or its analysis outputs, please cite it as below."
+title: "Prevalence, Thresholds, and Subgroup Performance Gaps in Clinical Prediction Models: A Multi-Dataset Analysis"
+type: software
+repository-code: "https://github.com/Zavashgh/clinical-prediction-subgroup-gaps"
+authors:
+  - family-names: Ghorbanpourbaboli
+    given-names: Zavash
+  - family-names: Afshar
+    given-names: Arina
+  - family-names: Jangravi
+    given-names: Elham
+  - family-names: Alaoui Mhamdi
+    given-names: Mohammed Ayoub
+  - family-names: Butler
+    given-names: Russell
+license: MIT
+abstract: >-
+  Analysis code and reference outputs for a retrospective secondary analysis of
+  five publicly available clinical prediction datasets, examining within-dataset
+  subgroup sensitivity differences across sex, age, and race/ethnicity, and how
+  prevalence standardization and operating thresholds affect their
+  interpretation. All data-derived preprocessing is fitted on training
+  observations only, and the Diabetes-130 dataset is partitioned, cross-
+  validated, calibrated, and resampled at the patient level.
+keywords:
+  - clinical prediction models
+  - machine learning
+  - algorithmic bias
+  - health equity
+  - model evaluation
