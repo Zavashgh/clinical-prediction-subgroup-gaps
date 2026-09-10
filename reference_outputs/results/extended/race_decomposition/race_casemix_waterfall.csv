@@ -1,0 +1,27 @@
+dataset,comparison,step,n_features,group_coef_logodds,pct_of_raw_gap_explained
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,raw (group only),1,-0.00624068335166271,-0.0
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,demographics,2,0.013040721734092618,308.9630413729959
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,comorbidities,3,0.03379647514707247,641.5508725990408
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,utilization,10,0.008360711842721474,233.97109533676186
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,medications,37,0.0031721791430075127,150.83063767627863
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,administrative,40,-0.012265034227182054,-96.53351301527375
+BRFSS 2022 (heart disease),Black_vs_White,raw (group only),1,-0.2700835243947951,-0.0
+BRFSS 2022 (heart disease),Black_vs_White,demographics,4,-0.1980112593669873,26.685176442845894
+BRFSS 2022 (heart disease),Black_vs_White,comorbidities,16,-0.36594081296060316,-35.491720119028244
+BRFSS 2022 (heart disease),Black_vs_White,behavioral,19,-0.3290919097259074,-21.848198798256455
+BRFSS 2022 (heart disease),Black_vs_White,access,21,-0.34743875502682847,-28.641225267395136
+BRFSS 2022 (heart disease),Hispanic_vs_White,raw (group only),1,-0.5828016157949135,-0.0
+BRFSS 2022 (heart disease),Hispanic_vs_White,demographics,4,-0.19851965020043194,65.93701101366018
+BRFSS 2022 (heart disease),Hispanic_vs_White,comorbidities,16,-0.21849276806236317,62.50992410782021
+BRFSS 2022 (heart disease),Hispanic_vs_White,behavioral,19,-0.16446747592395505,71.7798524460799
+BRFSS 2022 (heart disease),Hispanic_vs_White,access,21,-0.17437946318861652,70.07910437057193
+BRFSS 2022 (heart disease),Multiracial_vs_White,raw (group only),1,-0.06625348752058824,-0.0
+BRFSS 2022 (heart disease),Multiracial_vs_White,demographics,4,0.3448293207618346,620.4696894705793
+BRFSS 2022 (heart disease),Multiracial_vs_White,comorbidities,16,0.15036063056892932,326.9474954389455
+BRFSS 2022 (heart disease),Multiracial_vs_White,behavioral,19,0.12860279913488878,294.10721449935073
+BRFSS 2022 (heart disease),Multiracial_vs_White,access,21,0.1387048861871553,309.354845122761
+NHANES 2017-18 (diabetes),Black_vs_White,raw (group only),1,0.09279146782178165,0.0
+NHANES 2017-18 (diabetes),Black_vs_White,demographics,4,0.32518395305495795,-250.44596307013592
+NHANES 2017-18 (diabetes),Black_vs_White,comorbidities,7,0.17331260837229653,-86.77644878424215
+NHANES 2017-18 (diabetes),Black_vs_White,behavioral,9,0.17824151322058202,-92.08825703988059
+NHANES 2017-18 (diabetes),Black_vs_White,access,10,0.17901639311198508,-92.92333370112203

@@ -1,0 +1,31 @@
+dataset,command_id,analysis_role,protected_attribute,comparison,group,group_value,fn,fp,n,n_neg,n_pos,tn,tp
+sex_cdc,sex_cdc,primary,Sex,Male vs Female,Male,1,1247,8757,33611,27953,5658,19196,4411
+sex_cdc,sex_cdc,primary,Sex,Male vs Female,Female,0,1187,10705,42493,36158,6335,25453,5148
+sex_diabetes130,sex_diabetes130,primary,gender,Male vs Female,Male,Male,610,4391,13927,12441,1486,8050,876
+sex_diabetes130,sex_diabetes130,primary,gender,Male vs Female,Female,Female,654,5790,16253,14446,1807,8656,1153
+sex_brfss,sex_brfss,primary,SEXVAR,Male vs Female,Male,1.0,1458,14702,61984,55036,6948,40334,5490
+sex_brfss,sex_brfss,primary,SEXVAR,Male vs Female,Female,2.0,933,19571,70050,65073,4977,45502,4044
+sex_nhanes,sex_nhanes,primary,RIAGENDR,Male vs Female,Male,1.0,32,229,853,687,166,458,134
+sex_nhanes,sex_nhanes,primary,RIAGENDR,Male vs Female,Female,2.0,29,284,903,753,150,469,121
+sex_cchs,sex_cchs,primary,DHH_SEX,Male vs Female,Male,Male,259,4371,13354,11794,1560,7423,1301
+sex_cchs,sex_cchs,primary,DHH_SEX,Male vs Female,Female,Female,199,5541,16392,15004,1388,9463,1189
+CDC Diabetes (BRFSS 2015),age_decomposition,primary,age_band,Youngest (18_44) vs Oldest (65_plus),Youngest (18_44),18_44,313,2038,16273,15492,781,13454,468
+CDC Diabetes (BRFSS 2015),age_decomposition,primary,age_band,Youngest (18_44) vs Oldest (65_plus),Oldest (65_plus),65_plus,1197,9281,26769,20599,6170,11318,4973
+Diabetes-130 (readmission),age_decomposition,primary,age_band,Youngest (under_30) vs Oldest (60_plus),Youngest (under_30),under_30,26,147,720,640,80,493,54
+Diabetes-130 (readmission),age_decomposition,primary,age_band,Youngest (under_30) vs Oldest (60_plus),Oldest (60_plus),60_plus,994,6545,20366,18047,2319,11502,1325
+BRFSS 2022 (heart disease),age_decomposition,primary,age_band,Youngest (18_44) vs Oldest (65_plus),Youngest (18_44),18_44,328,3450,39740,39160,580,35710,252
+BRFSS 2022 (heart disease),age_decomposition,primary,age_band,Youngest (18_44) vs Oldest (65_plus),Oldest (65_plus),65_plus,1514,20248,47004,38888,8116,18640,6602
+NHANES 2017-18 (diabetes),age_decomposition,primary,age_band,Youngest (under_45) vs Oldest (65_plus),Youngest (under_45),under_45,18,88,739,705,34,617,16
+NHANES 2017-18 (diabetes),age_decomposition,primary,age_band,Youngest (under_45) vs Oldest (65_plus),Oldest (65_plus),65_plus,33,170,425,274,151,104,118
+CCHS 2019-20 (diabetes),age_decomposition,primary,age_band,Youngest (18_34) vs Oldest (65_plus),Youngest (18_34),18_34,11,200,4564,4549,15,4349,4
+CCHS 2019-20 (diabetes),age_decomposition,primary,age_band,Youngest (18_34) vs Oldest (65_plus),Oldest (65_plus),65_plus,628,5639,14101,11683,2418,6044,1790
+Diabetes-130 (readmission),race_decomposition,primary,race_group,AfricanAmerican vs Caucasian,AfricanAmerican,AfricanAmerican,265,1876,5710,5055,655,3179,390
+Diabetes-130 (readmission),race_decomposition,primary,race_group,AfricanAmerican vs Caucasian,Caucasian,Caucasian,966,8045,23127,20478,2649,12433,1683
+BRFSS 2022 (heart disease),race_decomposition,primary,race,Black vs White,Black,Black,157,3105,10550,9747,803,6642,646
+BRFSS 2022 (heart disease),race_decomposition,primary,race,Black vs White,White,White,1822,25981,95137,85836,9301,59855,7479
+BRFSS 2022 (heart disease),race_decomposition,prespecified_secondary_supplement,race,Hispanic vs White,Hispanic,Hispanic,225,2250,12798,12038,760,9788,535
+BRFSS 2022 (heart disease),race_decomposition,prespecified_secondary_supplement,race,Hispanic vs White,White,White,1841,26416,95120,85850,9270,59434,7429
+BRFSS 2022 (heart disease),race_decomposition,prespecified_secondary_supplement,race,Multiracial vs White,Multiracial,Multiracial,46,587,2814,2571,243,1984,197
+BRFSS 2022 (heart disease),race_decomposition,prespecified_secondary_supplement,race,Multiracial vs White,White,White,1891,25529,95224,85907,9317,60378,7426
+NHANES 2017-18 (diabetes),race_decomposition,primary,race,Black vs White,Black,Black,18,98,429,340,89,242,71
+NHANES 2017-18 (diabetes),race_decomposition,primary,race,Black vs White,White,White,18,193,584,490,94,297,76

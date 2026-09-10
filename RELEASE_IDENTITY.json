@@ -1,0 +1,20 @@
+{
+ "analysis_source_commit": "5b0145ea3bb0801551f5f343c24b9366b3192a1d",
+ "cluster_identifiers": "anonymous tokens preserving grouping exactly",
+ "doi": null,
+ "doi_status": "PENDING - not yet minted for this version",
+ "frozen_comparisons": 15,
+ "model_artifacts_over_repository_limit": 2,
+ "model_bundle": "release_assets_v1_1_0/fitted_models_v1_1_0.tar.gz",
+ "production_run_id": "20260909T234626Z_5b0145ea3bb0_e89e8377",
+ "public_row_identifiers": "opaque, release-local; source indices removed",
+ "published": false,
+ "release_candidate_version": "v1.1.0-candidate",
+ "run_status": "complete",
+ "supersedes": {
+  "doi": "10.5281/zenodo.22679529",
+  "note": "v1.0.0 is a published archival record of an earlier analysis and is not modified. Its DOI does not identify this analysis.",
+  "version": "v1.0.0"
+ },
+ "validation_status": "passed"
+}

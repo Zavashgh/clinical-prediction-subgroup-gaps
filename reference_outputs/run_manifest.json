@@ -1,0 +1,2752 @@
+{
+ "commands": [
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+   ],
+   "command_id": "preflight_unit_tests",
+   "completed_at_utc": "2026-09-09T23:46:56.943328+00:00",
+   "error": null,
+   "outputs": [],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:46:26.758534+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\preflight_unit_tests.stderr.log",
+   "stdout_log": "logs\\preflight_unit_tests.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-c",
+    "from src.pipeline import _build_models; models=_build_models(42); assert len(models)==6; print(','.join(models))"
+   ],
+   "command_id": "preflight_six_model_families",
+   "completed_at_utc": "2026-09-09T23:46:58.764739+00:00",
+   "error": null,
+   "outputs": [],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:46:56.960196+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\preflight_six_model_families.stderr.log",
+   "stdout_log": "logs\\preflight_six_model_families.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "src.output_contracts"
+   ],
+   "command_id": "preflight_output_contracts",
+   "completed_at_utc": "2026-09-09T23:47:01.227847+00:00",
+   "error": null,
+   "outputs": [],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:46:58.777243+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\preflight_output_contracts.stderr.log",
+   "stdout_log": "logs\\preflight_output_contracts.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "src.reproducibility_preflight"
+   ],
+   "command_id": "preflight_eight_thread_reproducibility",
+   "completed_at_utc": "2026-09-09T23:47:08.522460+00:00",
+   "error": null,
+   "outputs": [],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:47:01.241850+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\preflight_eight_thread_reproducibility.stderr.log",
+   "stdout_log": "logs\\preflight_eight_thread_reproducibility.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "jupyter",
+    "nbconvert",
+    "--to",
+    "notebook",
+    "--execute",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/prepared_notebooks/01_cdc_diabetes.ipynb",
+    "--output",
+    "01_cdc_diabetes.executed.ipynb",
+    "--output-dir",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/executed_notebooks",
+    "--ExecutePreprocessor.timeout=-1"
+   ],
+   "command_id": "sex_cdc",
+   "completed_at_utc": "2026-09-09T23:48:27.068469+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "image/png",
+     "path": "results/01_cdc_calibration.png",
+     "producing_command_id": "sex_cdc",
+     "sha256": "5ef3124ea133cfde8de6d5f1332460dd28d84ea72f591e776fba1bcc24be8cdf",
+     "size_bytes": 65402
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "image/png",
+     "path": "results/01_cdc_case_mix_waterfall.png",
+     "producing_command_id": "sex_cdc",
+     "sha256": "26b596b22aea56859861b4f2c4f365d2bddf7beb5c491e818b322e2f4c4e6f0f",
+     "size_bytes": 47459
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/01_cdc_diabetes_summary.csv",
+     "producing_command_id": "sex_cdc",
+     "sha256": "5e708240fe79a4b2c5bbff26f15b050e20c255be6f4906140b134185ad52194f",
+     "size_bytes": 833
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "image/png",
+     "path": "results/01_cdc_gap_npv.png",
+     "producing_command_id": "sex_cdc",
+     "sha256": "07050ff1df9213e99aa6c8e7e4f4824bdd48bae9b16a26c78090ddd09f42d284",
+     "size_bytes": 37658
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "image/png",
+     "path": "results/01_cdc_gap_ppv.png",
+     "producing_command_id": "sex_cdc",
+     "sha256": "93a5745ff8cb96c7676840620c55e03b88d35c2629befc15e8606094eba7257f",
+     "size_bytes": 30839
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "image/png",
+     "path": "results/01_cdc_gap_predicted_positive_rate.png",
+     "producing_command_id": "sex_cdc",
+     "sha256": "64e694438d53ec203574d12753e3acd4bcd523a05021288f934796bb926d0f30",
+     "size_bytes": 34115
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/sex_cdc_manifest.json",
+     "producing_command_id": "sex_cdc",
+     "sha256": "4f6012920b519e28f76e0b9d4d63870b1d461eb5991e4a011e9608b60ddc47a8",
+     "size_bytes": 2130
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/sex_cdc_model.joblib",
+     "producing_command_id": "sex_cdc",
+     "sha256": "805e60a63851aa9af3a2fb83cc2f21294c456a568915f8f95a8328cd3369fd7d",
+     "size_bytes": 3076532
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_cdc_performance.csv",
+     "producing_command_id": "sex_cdc",
+     "sha256": "f9767679f8a007308269c50d9111a3ef6abff37307f342ee3fc1761ab62bc533",
+     "size_bytes": 2008
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_cdc_predictions.csv",
+     "producing_command_id": "sex_cdc",
+     "sha256": "f1c51254e6df7c1a768faeb78ea043aadd278908512facce09c19f4d24b5f437",
+     "size_bytes": 11154315
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:47:08.541484+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\sex_cdc.stderr.log",
+   "stdout_log": "logs\\sex_cdc.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "jupyter",
+    "nbconvert",
+    "--to",
+    "notebook",
+    "--execute",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/prepared_notebooks/02_diabetes130.ipynb",
+    "--output",
+    "02_diabetes130.executed.ipynb",
+    "--output-dir",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/executed_notebooks",
+    "--ExecutePreprocessor.timeout=-1"
+   ],
+   "command_id": "sex_diabetes130",
+   "completed_at_utc": "2026-09-09T23:49:51.801877+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "image/png",
+     "path": "results/02_diabetes130_calibration.png",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "3c0dce8c7b39d83ac7a6305d1c3cba5420ed5dfa7bfb2f25ec914f5d4d9ce75b",
+     "size_bytes": 61056
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "image/png",
+     "path": "results/02_diabetes130_case_mix_waterfall.png",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "80cc1e41309a38d98f277007947f1c38d451dad41b96f9eb10ac1b75d6add487",
+     "size_bytes": 55279
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "image/png",
+     "path": "results/02_diabetes130_gap_npv.png",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "83a7e6024362ad615cc5e82785db9f4d557639ed17f1476ab514a4bd69b21d14",
+     "size_bytes": 36771
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "image/png",
+     "path": "results/02_diabetes130_gap_ppv.png",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "ee4619650f7253ff6676a9171798f43385579eb1688c378430e889318f9ad082",
+     "size_bytes": 33074
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "image/png",
+     "path": "results/02_diabetes130_gap_predicted_positive_rate.png",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "b098f5d409d8011f54fdfc02cd2360f6db5a5acf5485b9d57c748f315b85592a",
+     "size_bytes": 33244
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/02_diabetes130_summary.csv",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "5e24bea7c39aff76388d90dfee42e92e25a4bc7c47ac0a95363b495d0c1d8373",
+     "size_bytes": 885
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/sex_diabetes130_manifest.json",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "736d178a26fb6d5fa5c35a2528035f67641fd670899345a56aa157f83a357ad6",
+     "size_bytes": 3336
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/sex_diabetes130_model.joblib",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "eb5f981534b4f20c89f71edff8bcb49c9febd04d558fe29c00098fd9f3b97e8c",
+     "size_bytes": 5795306
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_diabetes130_performance.csv",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "05f4cee110e0a17619542232d568d1e524e942323ab2bc7fe9edcae1283769a5",
+     "size_bytes": 2010
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_diabetes130_predictions.csv",
+     "producing_command_id": "sex_diabetes130",
+     "sha256": "0f57104560e08fbb4dd18963696703f490b77fa1e6136b08930ae5c867e7e1d8",
+     "size_bytes": 4514000
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:48:27.088971+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\sex_diabetes130.stderr.log",
+   "stdout_log": "logs\\sex_diabetes130.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "jupyter",
+    "nbconvert",
+    "--to",
+    "notebook",
+    "--execute",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/prepared_notebooks/03_brfss.ipynb",
+    "--output",
+    "03_brfss.executed.ipynb",
+    "--output-dir",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/executed_notebooks",
+    "--ExecutePreprocessor.timeout=-1"
+   ],
+   "command_id": "sex_brfss",
+   "completed_at_utc": "2026-09-09T23:52:59.111385+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "image/png",
+     "path": "results/03_brfss_calibration.png",
+     "producing_command_id": "sex_brfss",
+     "sha256": "0f1fe1745587960963bac4311aad46435ea928c48147ebcc221e91a2f865b2a9",
+     "size_bytes": 73273
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "image/png",
+     "path": "results/03_brfss_case_mix_waterfall.png",
+     "producing_command_id": "sex_brfss",
+     "sha256": "14cb4f6bbb86461a82edc50e8cb143950df212cf7fb587ec5b6616ffd95ceb7a",
+     "size_bytes": 47653
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "image/png",
+     "path": "results/03_brfss_gap_npv.png",
+     "producing_command_id": "sex_brfss",
+     "sha256": "72bf4a143664baed0d59717706ee4910f5fe09748a6a8b132880c74b93dba082",
+     "size_bytes": 36087
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "image/png",
+     "path": "results/03_brfss_gap_ppv.png",
+     "producing_command_id": "sex_brfss",
+     "sha256": "318136422a1d8e439eab80e9381635c8b5a41a21547f26c1dc14f82788dc8b29",
+     "size_bytes": 30284
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "image/png",
+     "path": "results/03_brfss_gap_predicted_positive_rate.png",
+     "producing_command_id": "sex_brfss",
+     "sha256": "18475bf006ed369080ccf233926afc8f717507795680f6977cdb8234c6da417c",
+     "size_bytes": 36771
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/03_brfss_summary.csv",
+     "producing_command_id": "sex_brfss",
+     "sha256": "a51e4a3aeb45302862ffdce1c21c5a3778380bf50ec85fc7c502f33f42831245",
+     "size_bytes": 819
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/sex_brfss_manifest.json",
+     "producing_command_id": "sex_brfss",
+     "sha256": "7b341b777415f2286764e794f237426f731b56a406817519d176fcb7cba7011a",
+     "size_bytes": 2423
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/sex_brfss_model.joblib",
+     "producing_command_id": "sex_brfss",
+     "sha256": "47ca0cb097d7eb529a2f174b2df3faa563bb264c46cae6d58fec48da84889d84",
+     "size_bytes": 3123278
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_brfss_performance.csv",
+     "producing_command_id": "sex_brfss",
+     "sha256": "3620d559926539962e08e446c7edc5fcd74b39d4bfb6b4f3fd351c849f5e75f2",
+     "size_bytes": 2041
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_brfss_predictions.csv",
+     "producing_command_id": "sex_brfss",
+     "sha256": "5ea322fda191e00a3bc71f265f0e50d690c07486bef0ac578fb1db94743c975e",
+     "size_bytes": 21172840
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:49:51.822378+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\sex_brfss.stderr.log",
+   "stdout_log": "logs\\sex_brfss.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "jupyter",
+    "nbconvert",
+    "--to",
+    "notebook",
+    "--execute",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/prepared_notebooks/04_nhanes.ipynb",
+    "--output",
+    "04_nhanes.executed.ipynb",
+    "--output-dir",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/executed_notebooks",
+    "--ExecutePreprocessor.timeout=-1"
+   ],
+   "command_id": "sex_nhanes",
+   "completed_at_utc": "2026-09-09T23:53:15.012204+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "image/png",
+     "path": "results/04_nhanes_calibration.png",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "342da0cf60e94e3faa9ea44eff4c5b84700571a35f7081f9d460eafd3f96e449",
+     "size_bytes": 72284
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "image/png",
+     "path": "results/04_nhanes_case_mix_waterfall.png",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "1c310c10232605b8c08c83f06896d277339cdef9a19b288b7c70d5a04cea9a9c",
+     "size_bytes": 49711
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "image/png",
+     "path": "results/04_nhanes_gap_npv.png",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "284e0035702a6b9b474d42c2145fb42d2dc5d237d67db7f14e6e80371a0ea567",
+     "size_bytes": 31748
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "image/png",
+     "path": "results/04_nhanes_gap_ppv.png",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "5ff1899f1a4934cef4b249be116ee40e6b0b1b7899ef6bf9adf6a1fb09b59584",
+     "size_bytes": 32409
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "image/png",
+     "path": "results/04_nhanes_gap_predicted_positive_rate.png",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "a624f09cd3eae3f965070b3d768c29d97a3f14a17254ff0c169fc6d7c374d22b",
+     "size_bytes": 33571
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/04_nhanes_summary.csv",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "5e962163ce409a1cff06786f71c53879cc648f194268606d2dbc1a9c3b4aceb8",
+     "size_bytes": 1118
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/sex_nhanes_manifest.json",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "a7f38d344773967d90183c0f30b5023ac4e4e1484648843dcc3b6ab69aaba47d",
+     "size_bytes": 1994
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/sex_nhanes_model.joblib",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "f6646a85aa095170e1ac797fea5b08dcd374df3190fc1ca51f061205971c3bf4",
+     "size_bytes": 23367
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_nhanes_performance.csv",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "8408627542c3bc71039f7beaca6ee6d2a9b9d026c2d559b42776529f6c99e365",
+     "size_bytes": 1927
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_nhanes_predictions.csv",
+     "producing_command_id": "sex_nhanes",
+     "sha256": "613077bace939cda554830e7666ab2ac633cb65cd2273666bba084765432da5b",
+     "size_bytes": 216664
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:52:59.130884+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\sex_nhanes.stderr.log",
+   "stdout_log": "logs\\sex_nhanes.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "jupyter",
+    "nbconvert",
+    "--to",
+    "notebook",
+    "--execute",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/prepared_notebooks/05_cchs.ipynb",
+    "--output",
+    "05_cchs.executed.ipynb",
+    "--output-dir",
+    "<project-root>/production_runs/20260909T234626Z_5b0145ea3bb0_e89e8377/executed_notebooks",
+    "--ExecutePreprocessor.timeout=-1"
+   ],
+   "command_id": "sex_cchs",
+   "completed_at_utc": "2026-09-09T23:54:00.306095+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "image/png",
+     "path": "results/05_cchs_calibration.png",
+     "producing_command_id": "sex_cchs",
+     "sha256": "392b15d6e7b9bf9e2e36bc113394da8804052e0bdaf80b59edd0f31cc944399f",
+     "size_bytes": 66093
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "image/png",
+     "path": "results/05_cchs_case_mix_waterfall.png",
+     "producing_command_id": "sex_cchs",
+     "sha256": "9963e79d09ce7dca4c9252042893633d80648f1c1068f6a081d9cedf9aab0afc",
+     "size_bytes": 45214
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "image/png",
+     "path": "results/05_cchs_gap_npv.png",
+     "producing_command_id": "sex_cchs",
+     "sha256": "22414fee247dc964f6f2d0f2c82c3fa9df13aad6cca75cfb943efb43c8f3459c",
+     "size_bytes": 36139
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "image/png",
+     "path": "results/05_cchs_gap_ppv.png",
+     "producing_command_id": "sex_cchs",
+     "sha256": "19657d805c4d67227e8a2c953c1eab24ceef4d33cbadd40d606a2a2ab87bc272",
+     "size_bytes": 33929
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "image/png",
+     "path": "results/05_cchs_gap_predicted_positive_rate.png",
+     "producing_command_id": "sex_cchs",
+     "sha256": "67e82f9e8071ddddf75bed939bd86c521b6fc1dc9cd7d61f2ec0ab48a8bd38fd",
+     "size_bytes": 36275
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/05_cchs_summary.csv",
+     "producing_command_id": "sex_cchs",
+     "sha256": "2f6b871086697cd41558b523b86edeea5efc9e6c0bfe105a317773ff861bf565",
+     "size_bytes": 1120
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/sex_cchs_manifest.json",
+     "producing_command_id": "sex_cchs",
+     "sha256": "dcacdab646b67373cc0082f40a8093b1e9f12ad27bb9bc753203a094fc179322",
+     "size_bytes": 2274
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/sex_cchs_model.joblib",
+     "producing_command_id": "sex_cchs",
+     "sha256": "dca21dd471cdf80e32dbd24733f99dde1fc32be394f6e5f1cb8b160ad5a5bdc4",
+     "size_bytes": 254363726
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_cchs_performance.csv",
+     "producing_command_id": "sex_cchs",
+     "sha256": "56966e3da3dfa0017cc76b3cc9dd01dad828831fd7594b54d6fce15422835ff0",
+     "size_bytes": 1962
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/sex_cchs_predictions.csv",
+     "producing_command_id": "sex_cchs",
+     "sha256": "6259d91e4b9e94421a73dfeee5de0db202ff974c320376733a5a4a1ad1576caf",
+     "size_bytes": 3944510
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:53:15.036715+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\sex_cchs.stderr.log",
+   "stdout_log": "logs\\sex_cchs.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "run_age_decomposition.py",
+    "--jama-only"
+   ],
+   "command_id": "age_decomposition",
+   "completed_at_utc": "2026-09-09T23:57:22.237680+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/age_decomposition/age_bootstrap.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "c6726ab9f8081d65e7611bf96522114f52aac9e2c0576194688165cff9c7497d",
+     "size_bytes": 6892
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/age_decomposition/age_casemix_waterfall.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "84ca63e8e1124bf7e5aa0fe6c65d57dad990c6d9c3958b907f61c59fe128ba4f",
+     "size_bytes": 2590
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/age_decomposition/age_ipw_adjustment.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "d16fef729ee21c81e6c7ac2881f923db83d27eb84445946eeaa02bb601efd7d7",
+     "size_bytes": 2606
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/age_decomposition/age_raw_gaps.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "1ea84fe2b93819397220b978316e7d4535afbe1575968c30b884abe182db8b64",
+     "size_bytes": 3708
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/age_brfss_2022_heart_disease_manifest.json",
+     "producing_command_id": "age_decomposition",
+     "sha256": "8e2956c53e8589c3d64349eabe85b962a69cdd53b77dbae70073bc38ac7af79e",
+     "size_bytes": 2451
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/age_brfss_2022_heart_disease_model.joblib",
+     "producing_command_id": "age_decomposition",
+     "sha256": "d4f84e4e357b0fd8f8cfe9f851ad6715a6b5b92b70f429fd6d19dec7d1dbf1e2",
+     "size_bytes": 3119196
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_brfss_2022_heart_disease_performance.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "e718e4c041381056f2c4dfedf767a6eb105af9bc412a8627524526c125bbbc86",
+     "size_bytes": 1991
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_brfss_2022_heart_disease_predictions.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "c788c8cab9ef5981104d75ea1a7be504e71d598cfe822fa10437f675abaac3df",
+     "size_bytes": 11808552
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/age_cchs_2019_20_diabetes_manifest.json",
+     "producing_command_id": "age_decomposition",
+     "sha256": "a13a77cb1fb2cb2effbb0b9db17113ec1a7f3100de5cec6ac54156525c69e6a1",
+     "size_bytes": 2321
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/age_cchs_2019_20_diabetes_model.joblib",
+     "producing_command_id": "age_decomposition",
+     "sha256": "e0f58c1195cc330459972c9b8abf6f6def9b8fdb4011a9ecd706c18da124ba5e",
+     "size_bytes": 30031
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_cchs_2019_20_diabetes_performance.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "e8f297939b96392c9d591e638669729b900ef7fa700f3dcd736cc4b127d63998",
+     "size_bytes": 2028
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_cchs_2019_20_diabetes_predictions.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "9d4adf7418a051778957da5f9b28b911501ff7ac886397c75ca06c5e10e35c10",
+     "size_bytes": 2753272
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/age_cdc_diabetes_brfss_2015_manifest.json",
+     "producing_command_id": "age_decomposition",
+     "sha256": "5090972fd1158ac9a4d266bea51223768957cbd14e7ed1159c849bfe5559a2b5",
+     "size_bytes": 2195
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/age_cdc_diabetes_brfss_2015_model.joblib",
+     "producing_command_id": "age_decomposition",
+     "sha256": "1d6940411eb4dc2554033b776d86910aac5a741d83c7ed462f6c56444801587b",
+     "size_bytes": 3058866
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_cdc_diabetes_brfss_2015_performance.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "299a8ad712e5238aee8fe3d274ee6583743de327b60037219ca1fa6f9f724ffd",
+     "size_bytes": 1989
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_cdc_diabetes_brfss_2015_predictions.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "039ec7e9e0cd46e183d1aa334fb846539e837bf5675dd6ddb2dbcc5e6a0cd77a",
+     "size_bytes": 5795554
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/age_diabetes_130_readmission_manifest.json",
+     "producing_command_id": "age_decomposition",
+     "sha256": "f35d456bf48f7932bf60babca5e0953dc12ec1b24230d3f8a22516000d610892",
+     "size_bytes": 3402
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/age_diabetes_130_readmission_model.joblib",
+     "producing_command_id": "age_decomposition",
+     "sha256": "d3f1b9b3b15684314bcf91a751b7350d48f1d36bc743d2541edfff281c0aedc8",
+     "size_bytes": 385552014
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_diabetes_130_readmission_performance.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "593d2f4afb9ef5d6a142a459b49ef158fdf38cd13469260215c7265961d12345",
+     "size_bytes": 2053
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_diabetes_130_readmission_predictions.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "14359a8155b029b5b1c64158e83ebd5561f220636448411da61c5ec25008ebf8",
+     "size_bytes": 3323280
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/age_nhanes_2017_18_diabetes_manifest.json",
+     "producing_command_id": "age_decomposition",
+     "sha256": "dcdefbad49c20282dc3125dc9ef225b6605ab162344020affe0151dbc86a8a79",
+     "size_bytes": 2072
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/age_nhanes_2017_18_diabetes_model.joblib",
+     "producing_command_id": "age_decomposition",
+     "sha256": "ee6e180ae658f0f7ffffbf1ff5d24c97b6f83dd309378a509c998ae68ef223af",
+     "size_bytes": 22498
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_nhanes_2017_18_diabetes_performance.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "d94cc77900cb5e1475d4d1c8af45c2b268f68c2a350117199354439213c8b742",
+     "size_bytes": 2016
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/age_nhanes_2017_18_diabetes_predictions.csv",
+     "producing_command_id": "age_decomposition",
+     "sha256": "e179c6cf3d8f7e2f573075a532195a80338d389f40545eeaf77b5127abd4a4c3",
+     "size_bytes": 172335
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:54:00.323102+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\age_decomposition.stderr.log",
+   "stdout_log": "logs\\age_decomposition.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "run_race_decomposition.py",
+    "--jama-only"
+   ],
+   "command_id": "race_decomposition",
+   "completed_at_utc": "2026-09-10T00:04:10.119454+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/race_decomposition/race_bootstrap.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "39f4403c3b55f71f3ced72ca153b030b4ec5f47f667193f59b54e4b62402256f",
+     "size_bytes": 7119
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/race_decomposition/race_casemix_waterfall.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "ecdd9ddf34468a49f7a614842178e850fa13b6519794f177dfcd5e0745120777",
+     "size_bytes": 2666
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/race_decomposition/race_ipw_adjustment.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "56e6115e4e5a00ebeeed0ddb7c8248fbc1a9d79c0f4a0e35bf441b44c555f91b",
+     "size_bytes": 2696
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/race_decomposition/race_raw_gaps.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "9de6a719e07fd10e760e06c9b7ab5428b901fc78b7078ec6b53da5bdb2d5ef4f",
+     "size_bytes": 2582
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/race_decomposition/race_secondary_comparisons.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "10cccbabe52445ed57971e81b6a1e692f080878dde51ff9a58e6b0c18f66209f",
+     "size_bytes": 1806
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/race_decomposition/race_stability_checks.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "a8371731706432995ec28fc5d1ff982e1079f1b9f8873e219b97facf9dcd6822",
+     "size_bytes": 582
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_manifest.json",
+     "producing_command_id": "race_decomposition",
+     "sha256": "57965a0b98fea1281e3c9a3a38ed7550587b73768ef5e5e7cd0cd66155a93bca",
+     "size_bytes": 2482
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_model.joblib",
+     "producing_command_id": "race_decomposition",
+     "sha256": "4b89f62d4a9de93789da49ec2833e2a6550d076a0ef40cc001440f298e37c41a",
+     "size_bytes": 3118980
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_performance.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "b4bc3b681e7b28449f5429f920bbfc23918fbbc9d3928ef852044abaf6c1c3e3",
+     "size_bytes": 2022
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_predictions.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "1447226acb08a969988f339e99b7f962bb4e5cb4de74b1323f4bb873de3901d7",
+     "size_bytes": 15936531
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/race_brfss_2022_heart_disease_manifest.json",
+     "producing_command_id": "race_decomposition",
+     "sha256": "089e62505629abeaf92121b459d4d10487bfa6bf2671ba415ab3451ca1bd714d",
+     "size_bytes": 2379
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/race_brfss_2022_heart_disease_model.joblib",
+     "producing_command_id": "race_decomposition",
+     "sha256": "2cf3ec84631f9f02bb6723617f085c02934f4735b2d17c15022acaa62849370f",
+     "size_bytes": 3117428
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_manifest.json",
+     "producing_command_id": "race_decomposition",
+     "sha256": "89f30ca85de025cef93f469c921f66ffcabe8e2a833985bd82d2fe8e6d81f62b",
+     "size_bytes": 2497
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_model.joblib",
+     "producing_command_id": "race_decomposition",
+     "sha256": "92265b2dbeae955fbcced25a840bfa0088552c7ecb791b6b4c24f1b651c8445d",
+     "size_bytes": 3118628
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_performance.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "b36825c0f2253250947751bbeaee140d90a7f14ab907b6c27cbe54a6823aa48b",
+     "size_bytes": 2021
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_predictions.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "ff80911f81449660e195c30843d57219c51304eb46081f56893dd8b834879c03",
+     "size_bytes": 14752574
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_brfss_2022_heart_disease_performance.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "f301875731303e638d9a39139447e92df340c70a45c572dc8c7bc4cd31a6edc8",
+     "size_bytes": 1972
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_brfss_2022_heart_disease_predictions.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "0d17219beec6fc7c207350a562ac3c45ffcecbcffc35d86b91a187cbc9dc5240",
+     "size_bytes": 14193551
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/race_diabetes_130_readmission_manifest.json",
+     "producing_command_id": "race_decomposition",
+     "sha256": "70f1090b7fbca754642ad4eb48263cea5e6bfda747b3e936ebc0ff41c22a13e6",
+     "size_bytes": 3300
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/race_diabetes_130_readmission_model.joblib",
+     "producing_command_id": "race_decomposition",
+     "sha256": "5efbaa3ba94755b6153c0938e11de2896ed8f6afd78d72d1d42f20029a90d02b",
+     "size_bytes": 5579546
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_diabetes_130_readmission_performance.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "33b92f29019665ee88acbd497fd8ff0ffe9fbd1b9e66318be31e15793fccc017",
+     "size_bytes": 2043
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_diabetes_130_readmission_predictions.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "c90f24325f0af960c000e2e73b21d95dbef76924ddf532f9b7af2a8243e1ccb5",
+     "size_bytes": 4580582
+    },
+    {
+     "disposition": "generated",
+     "file_type": "json",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/json",
+     "path": "results/frozen/race_nhanes_2017_18_diabetes_manifest.json",
+     "producing_command_id": "race_decomposition",
+     "sha256": "10232685ab737412d813b51ace8e6905cdd45180600cb30c4549041e742a729f",
+     "size_bytes": 1980
+    },
+    {
+     "disposition": "generated",
+     "file_type": "joblib",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/octet-stream",
+     "path": "results/frozen/race_nhanes_2017_18_diabetes_model.joblib",
+     "producing_command_id": "race_decomposition",
+     "sha256": "8c38be9fe1063017acc9ad893d511c52b84d8a226f429665aae4054f0ba5fee8",
+     "size_bytes": 19229
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_nhanes_2017_18_diabetes_performance.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "a4808d7f05777964b89b9d5812a1a72302fc3b2e6f34dd70886561c0b67378a8",
+     "size_bytes": 1980
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/frozen/race_nhanes_2017_18_diabetes_predictions.csv",
+     "producing_command_id": "race_decomposition",
+     "sha256": "56577a7483475e5891855d11369df7f192b063e8f7ccff13adf8ab10dc217c89",
+     "size_bytes": 145342
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-09T23:57:22.258681+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\race_decomposition.stderr.log",
+   "stdout_log": "logs\\race_decomposition.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "scripts/run_jama_supplement.py"
+   ],
+   "command_id": "jama_supplement_analyses",
+   "completed_at_utc": "2026-09-10T00:07:05.013979+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/jama_supplement/case_mix_point_estimates.csv",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "a70ccacce4982a39e9535964a4d33837a78c6ec106735bdf418482fa2e939242",
+     "size_bytes": 2003
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "image/png",
+     "path": "results/extended/jama_supplement/figures/threshold_sweep_brfss.png",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "cc30fdb153b8af81218c54ad2c0c75ef92cf20f1aa4b0e628c75c2b1d713a22a",
+     "size_bytes": 120676
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "image/png",
+     "path": "results/extended/jama_supplement/figures/threshold_sweep_cchs.png",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "9e5bfd5ee1a826198f56b93f6e955c523f1000a5e313eb01882c89233e732852",
+     "size_bytes": 117481
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "image/png",
+     "path": "results/extended/jama_supplement/figures/threshold_sweep_cdc.png",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "dddfb1d937d9c7822387c796158e945e27a276dcec094306a1ab480c55eb0f19",
+     "size_bytes": 111283
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "image/png",
+     "path": "results/extended/jama_supplement/figures/threshold_sweep_d130.png",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "9a9c182957058358831fdf0d52d3780197855fe4cb4b9a9e634d987b9dbb8b05",
+     "size_bytes": 109147
+    },
+    {
+     "disposition": "generated",
+     "file_type": "png",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "image/png",
+     "path": "results/extended/jama_supplement/figures/threshold_sweep_nhanes.png",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "0eced6cf2b5b53651b773dae940058bc77c2f1180b6476d725b5d474b5390291",
+     "size_bytes": 125136
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/jama_supplement/prevalence_standardized_metrics.csv",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "e01157505a5f6ea6addbb0536fe49aa458632140cdca72c07bf1d5369bd13ce3",
+     "size_bytes": 3051
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/jama_supplement/threshold_policy.csv",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "01bc7c3fbd2b8f353aef0f64d6a5db36d415aa8d7f7d83e3750028410fbd03ff",
+     "size_bytes": 543
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/extended/jama_supplement/threshold_sweep.csv",
+     "producing_command_id": "jama_supplement_analyses",
+     "sha256": "fc791b5536e1389b03bdc929415dcd57dd61c4c4d028a5d2563103c5ed363bd0",
+     "size_bytes": 192899
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-10T00:04:10.142954+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\jama_supplement_analyses.stderr.log",
+   "stdout_log": "logs\\jama_supplement_analyses.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "scripts/build_jama_reporting_sources.py"
+   ],
+   "command_id": "jama_reporting_sources",
+   "completed_at_utc": "2026-09-10T00:07:07.355854+00:00",
+   "error": null,
+   "outputs": [
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/jama_reporting/etable1_subgroup_metrics_source.csv",
+     "producing_command_id": "jama_reporting_sources",
+     "sha256": "cafe0aee40ecd6a239c1cd6a5d60db66fdbecc2c2fcca4ede6e226f267e36fc6",
+     "size_bytes": 35675
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/jama_reporting/etable_calibration_source.csv",
+     "producing_command_id": "jama_reporting_sources",
+     "sha256": "cc83a4fa2a98bd3796e18f8c1e47e8d0eb3df34a821fb5097f5c10827a61989f",
+     "size_bytes": 15200
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/jama_reporting/etable_model_performance_source.csv",
+     "producing_command_id": "jama_reporting_sources",
+     "sha256": "f74a0773935cdf96209ca1d88b923199c80c791c5c0b85e89bcd6784cb7ef1b7",
+     "size_bytes": 12226
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/jama_reporting/figure1_source_values.csv",
+     "producing_command_id": "jama_reporting_sources",
+     "sha256": "7ad6bed055c3e8c90c6c15c08e90809e189102f91a72c3f105c9c2102f201f6b",
+     "size_bytes": 2722
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/jama_reporting/missing_data_flow.csv",
+     "producing_command_id": "jama_reporting_sources",
+     "sha256": "950572ace0b5f9981ce5d6542a02e630d78a66e387dbb0ac18def8c769a9fca0",
+     "size_bytes": 1416
+    },
+    {
+     "disposition": "generated",
+     "file_type": "csv",
+     "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+     "media_type": "application/vnd.ms-excel",
+     "path": "results/jama_reporting/table1_source.csv",
+     "producing_command_id": "jama_reporting_sources",
+     "sha256": "e9150e6b0ec33d256a5f5178174b42dfa8c68128ffcc12366b16802e6b271a2d",
+     "size_bytes": 4075
+    }
+   ],
+   "return_code": 0,
+   "started_at_utc": "2026-09-10T00:07:05.039989+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\jama_reporting_sources.stderr.log",
+   "stdout_log": "logs\\jama_reporting_sources.stdout.log"
+  },
+  {
+   "argv": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+   ],
+   "command_id": "postflight_unit_tests",
+   "completed_at_utc": "2026-09-10T00:07:37.439515+00:00",
+   "error": null,
+   "outputs": [],
+   "return_code": 0,
+   "started_at_utc": "2026-09-10T00:07:07.378354+00:00",
+   "state": "succeeded",
+   "stderr_log": "logs\\postflight_unit_tests.stderr.log",
+   "stdout_log": "logs\\postflight_unit_tests.stdout.log"
+  }
+ ],
+ "completed_at_utc": "2026-09-10T00:07:38.021229+00:00",
+ "environment": {
+  "packages": {
+   "jupyter": "1.1.1",
+   "matplotlib": "3.10.9",
+   "nbconvert": "7.17.1",
+   "numpy": "2.4.4",
+   "pandas": "3.0.3",
+   "pyreadstat": "1.3.5",
+   "scikit-learn": "1.9.0",
+   "scipy": "1.17.1",
+   "statsmodels": "0.14.6",
+   "xgboost": "3.2.0"
+  },
+  "python_executable": "python",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]"
+ },
+ "execution": {
+  "n_jobs": 8,
+  "production_scope": "jama_manuscript",
+  "python_hash_seed": "0",
+  "random_seed": 42,
+  "staging_results": "production_runs\\20260909T234626Z_5b0145ea3bb0_e89e8377\\staging\\results",
+  "thread_environment": {
+   "BLAS_NUM_THREADS": "8",
+   "BLIS_NUM_THREADS": "8",
+   "MKL_NUM_THREADS": "8",
+   "NUMEXPR_NUM_THREADS": "8",
+   "OMP_NUM_THREADS": "8",
+   "OPENBLAS_NUM_THREADS": "8",
+   "VECLIB_MAXIMUM_THREADS": "8"
+  }
+ },
+ "failed_analysis": null,
+ "git": {
+  "branch": "correction/leakage-and-patient-grouping",
+  "commit": "5b0145ea3bb0801551f5f343c24b9366b3192a1d",
+  "dirty": false,
+  "tracked_status": []
+ },
+ "inputs": [
+  {
+   "path": "data/cdc_diabetes.csv",
+   "sha256": "a971809d0786d2d7d7f6070f83dfe8af9d860ea33a79e0e2701c8a49f78f9861",
+   "size_bytes": 22738151
+  },
+  {
+   "path": "data/diabetes_130_hospitals.csv",
+   "sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+   "size_bytes": 19159383
+  },
+  {
+   "path": "data/brfss2022_subset.csv",
+   "sha256": "1ef759a95546e53335577d8c42c5459e6dfacde6f61f14789a19e9592a578dc1",
+   "size_bytes": 44912331
+  },
+  {
+   "path": "data/nhanes_2017_2018.csv",
+   "sha256": "1aa93bec3e3ab09d999eaeb1ce643c85d56d1d0f30d70593dd5722c7bf38998d",
+   "size_bytes": 501365
+  },
+  {
+   "path": "data/cchs_2019_2020_subset.csv",
+   "sha256": "f50cc9d35608033ae5dc83cd57bb82df46972b9c245d9ec61dfb21a7b5f7a9c9",
+   "size_bytes": 20836550
+  }
+ ],
+ "integrity": {
+  "final_manifest_sha256_location": "run_manifest.sha256",
+  "manifest_payload_sha256": "95d1a3af43fb8982a30bf95e82ef9c3ab70fdb3471745d990f5b63bbe695de76",
+  "self_hash_policy": "manifest_payload_sha256 hashes canonical JSON with that field set to null; the detached run_manifest.sha256 hashes the final manifest bytes, avoiding an impossible embedded self-reference"
+ },
+ "outputs": [
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "image/png",
+   "path": "results/01_cdc_calibration.png",
+   "producing_command_id": "sex_cdc",
+   "sha256": "5ef3124ea133cfde8de6d5f1332460dd28d84ea72f591e776fba1bcc24be8cdf",
+   "size_bytes": 65402
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "image/png",
+   "path": "results/01_cdc_case_mix_waterfall.png",
+   "producing_command_id": "sex_cdc",
+   "sha256": "26b596b22aea56859861b4f2c4f365d2bddf7beb5c491e818b322e2f4c4e6f0f",
+   "size_bytes": 47459
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/01_cdc_diabetes_summary.csv",
+   "producing_command_id": "sex_cdc",
+   "sha256": "5e708240fe79a4b2c5bbff26f15b050e20c255be6f4906140b134185ad52194f",
+   "size_bytes": 833
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "image/png",
+   "path": "results/01_cdc_gap_npv.png",
+   "producing_command_id": "sex_cdc",
+   "sha256": "07050ff1df9213e99aa6c8e7e4f4824bdd48bae9b16a26c78090ddd09f42d284",
+   "size_bytes": 37658
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "image/png",
+   "path": "results/01_cdc_gap_ppv.png",
+   "producing_command_id": "sex_cdc",
+   "sha256": "93a5745ff8cb96c7676840620c55e03b88d35c2629befc15e8606094eba7257f",
+   "size_bytes": 30839
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "image/png",
+   "path": "results/01_cdc_gap_predicted_positive_rate.png",
+   "producing_command_id": "sex_cdc",
+   "sha256": "64e694438d53ec203574d12753e3acd4bcd523a05021288f934796bb926d0f30",
+   "size_bytes": 34115
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "image/png",
+   "path": "results/02_diabetes130_calibration.png",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "3c0dce8c7b39d83ac7a6305d1c3cba5420ed5dfa7bfb2f25ec914f5d4d9ce75b",
+   "size_bytes": 61056
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "image/png",
+   "path": "results/02_diabetes130_case_mix_waterfall.png",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "80cc1e41309a38d98f277007947f1c38d451dad41b96f9eb10ac1b75d6add487",
+   "size_bytes": 55279
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "image/png",
+   "path": "results/02_diabetes130_gap_npv.png",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "83a7e6024362ad615cc5e82785db9f4d557639ed17f1476ab514a4bd69b21d14",
+   "size_bytes": 36771
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "image/png",
+   "path": "results/02_diabetes130_gap_ppv.png",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "ee4619650f7253ff6676a9171798f43385579eb1688c378430e889318f9ad082",
+   "size_bytes": 33074
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "image/png",
+   "path": "results/02_diabetes130_gap_predicted_positive_rate.png",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "b098f5d409d8011f54fdfc02cd2360f6db5a5acf5485b9d57c748f315b85592a",
+   "size_bytes": 33244
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/02_diabetes130_summary.csv",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "5e24bea7c39aff76388d90dfee42e92e25a4bc7c47ac0a95363b495d0c1d8373",
+   "size_bytes": 885
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "image/png",
+   "path": "results/03_brfss_calibration.png",
+   "producing_command_id": "sex_brfss",
+   "sha256": "0f1fe1745587960963bac4311aad46435ea928c48147ebcc221e91a2f865b2a9",
+   "size_bytes": 73273
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "image/png",
+   "path": "results/03_brfss_case_mix_waterfall.png",
+   "producing_command_id": "sex_brfss",
+   "sha256": "14cb4f6bbb86461a82edc50e8cb143950df212cf7fb587ec5b6616ffd95ceb7a",
+   "size_bytes": 47653
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "image/png",
+   "path": "results/03_brfss_gap_npv.png",
+   "producing_command_id": "sex_brfss",
+   "sha256": "72bf4a143664baed0d59717706ee4910f5fe09748a6a8b132880c74b93dba082",
+   "size_bytes": 36087
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "image/png",
+   "path": "results/03_brfss_gap_ppv.png",
+   "producing_command_id": "sex_brfss",
+   "sha256": "318136422a1d8e439eab80e9381635c8b5a41a21547f26c1dc14f82788dc8b29",
+   "size_bytes": 30284
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "image/png",
+   "path": "results/03_brfss_gap_predicted_positive_rate.png",
+   "producing_command_id": "sex_brfss",
+   "sha256": "18475bf006ed369080ccf233926afc8f717507795680f6977cdb8234c6da417c",
+   "size_bytes": 36771
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/03_brfss_summary.csv",
+   "producing_command_id": "sex_brfss",
+   "sha256": "a51e4a3aeb45302862ffdce1c21c5a3778380bf50ec85fc7c502f33f42831245",
+   "size_bytes": 819
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "image/png",
+   "path": "results/04_nhanes_calibration.png",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "342da0cf60e94e3faa9ea44eff4c5b84700571a35f7081f9d460eafd3f96e449",
+   "size_bytes": 72284
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "image/png",
+   "path": "results/04_nhanes_case_mix_waterfall.png",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "1c310c10232605b8c08c83f06896d277339cdef9a19b288b7c70d5a04cea9a9c",
+   "size_bytes": 49711
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "image/png",
+   "path": "results/04_nhanes_gap_npv.png",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "284e0035702a6b9b474d42c2145fb42d2dc5d237d67db7f14e6e80371a0ea567",
+   "size_bytes": 31748
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "image/png",
+   "path": "results/04_nhanes_gap_ppv.png",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "5ff1899f1a4934cef4b249be116ee40e6b0b1b7899ef6bf9adf6a1fb09b59584",
+   "size_bytes": 32409
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "image/png",
+   "path": "results/04_nhanes_gap_predicted_positive_rate.png",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "a624f09cd3eae3f965070b3d768c29d97a3f14a17254ff0c169fc6d7c374d22b",
+   "size_bytes": 33571
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/04_nhanes_summary.csv",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "5e962163ce409a1cff06786f71c53879cc648f194268606d2dbc1a9c3b4aceb8",
+   "size_bytes": 1118
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "image/png",
+   "path": "results/05_cchs_calibration.png",
+   "producing_command_id": "sex_cchs",
+   "sha256": "392b15d6e7b9bf9e2e36bc113394da8804052e0bdaf80b59edd0f31cc944399f",
+   "size_bytes": 66093
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "image/png",
+   "path": "results/05_cchs_case_mix_waterfall.png",
+   "producing_command_id": "sex_cchs",
+   "sha256": "9963e79d09ce7dca4c9252042893633d80648f1c1068f6a081d9cedf9aab0afc",
+   "size_bytes": 45214
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "image/png",
+   "path": "results/05_cchs_gap_npv.png",
+   "producing_command_id": "sex_cchs",
+   "sha256": "22414fee247dc964f6f2d0f2c82c3fa9df13aad6cca75cfb943efb43c8f3459c",
+   "size_bytes": 36139
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "image/png",
+   "path": "results/05_cchs_gap_ppv.png",
+   "producing_command_id": "sex_cchs",
+   "sha256": "19657d805c4d67227e8a2c953c1eab24ceef4d33cbadd40d606a2a2ab87bc272",
+   "size_bytes": 33929
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "image/png",
+   "path": "results/05_cchs_gap_predicted_positive_rate.png",
+   "producing_command_id": "sex_cchs",
+   "sha256": "67e82f9e8071ddddf75bed939bd86c521b6fc1dc9cd7d61f2ec0ab48a8bd38fd",
+   "size_bytes": 36275
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/05_cchs_summary.csv",
+   "producing_command_id": "sex_cchs",
+   "sha256": "2f6b871086697cd41558b523b86edeea5efc9e6c0bfe105a317773ff861bf565",
+   "size_bytes": 1120
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/age_decomposition/age_bootstrap.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "c6726ab9f8081d65e7611bf96522114f52aac9e2c0576194688165cff9c7497d",
+   "size_bytes": 6892
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/age_decomposition/age_casemix_waterfall.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "84ca63e8e1124bf7e5aa0fe6c65d57dad990c6d9c3958b907f61c59fe128ba4f",
+   "size_bytes": 2590
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/age_decomposition/age_ipw_adjustment.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "d16fef729ee21c81e6c7ac2881f923db83d27eb84445946eeaa02bb601efd7d7",
+   "size_bytes": 2606
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/age_decomposition/age_raw_gaps.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "1ea84fe2b93819397220b978316e7d4535afbe1575968c30b884abe182db8b64",
+   "size_bytes": 3708
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/jama_supplement/case_mix_point_estimates.csv",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "a70ccacce4982a39e9535964a4d33837a78c6ec106735bdf418482fa2e939242",
+   "size_bytes": 2003
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "image/png",
+   "path": "results/extended/jama_supplement/figures/threshold_sweep_brfss.png",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "cc30fdb153b8af81218c54ad2c0c75ef92cf20f1aa4b0e628c75c2b1d713a22a",
+   "size_bytes": 120676
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "image/png",
+   "path": "results/extended/jama_supplement/figures/threshold_sweep_cchs.png",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "9e5bfd5ee1a826198f56b93f6e955c523f1000a5e313eb01882c89233e732852",
+   "size_bytes": 117481
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "image/png",
+   "path": "results/extended/jama_supplement/figures/threshold_sweep_cdc.png",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "dddfb1d937d9c7822387c796158e945e27a276dcec094306a1ab480c55eb0f19",
+   "size_bytes": 111283
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "image/png",
+   "path": "results/extended/jama_supplement/figures/threshold_sweep_d130.png",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "9a9c182957058358831fdf0d52d3780197855fe4cb4b9a9e634d987b9dbb8b05",
+   "size_bytes": 109147
+  },
+  {
+   "disposition": "generated",
+   "file_type": "png",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "image/png",
+   "path": "results/extended/jama_supplement/figures/threshold_sweep_nhanes.png",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "0eced6cf2b5b53651b773dae940058bc77c2f1180b6476d725b5d474b5390291",
+   "size_bytes": 125136
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/jama_supplement/prevalence_standardized_metrics.csv",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "e01157505a5f6ea6addbb0536fe49aa458632140cdca72c07bf1d5369bd13ce3",
+   "size_bytes": 3051
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/jama_supplement/threshold_policy.csv",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "01bc7c3fbd2b8f353aef0f64d6a5db36d415aa8d7f7d83e3750028410fbd03ff",
+   "size_bytes": 543
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:04.940952+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/jama_supplement/threshold_sweep.csv",
+   "producing_command_id": "jama_supplement_analyses",
+   "sha256": "fc791b5536e1389b03bdc929415dcd57dd61c4c4d028a5d2563103c5ed363bd0",
+   "size_bytes": 192899
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/race_decomposition/race_bootstrap.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "39f4403c3b55f71f3ced72ca153b030b4ec5f47f667193f59b54e4b62402256f",
+   "size_bytes": 7119
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/race_decomposition/race_casemix_waterfall.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "ecdd9ddf34468a49f7a614842178e850fa13b6519794f177dfcd5e0745120777",
+   "size_bytes": 2666
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/race_decomposition/race_ipw_adjustment.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "56e6115e4e5a00ebeeed0ddb7c8248fbc1a9d79c0f4a0e35bf441b44c555f91b",
+   "size_bytes": 2696
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/race_decomposition/race_raw_gaps.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "9de6a719e07fd10e760e06c9b7ab5428b901fc78b7078ec6b53da5bdb2d5ef4f",
+   "size_bytes": 2582
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/race_decomposition/race_secondary_comparisons.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "10cccbabe52445ed57971e81b6a1e692f080878dde51ff9a58e6b0c18f66209f",
+   "size_bytes": 1806
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/extended/race_decomposition/race_stability_checks.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "a8371731706432995ec28fc5d1ff982e1079f1b9f8873e219b97facf9dcd6822",
+   "size_bytes": 582
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/age_brfss_2022_heart_disease_manifest.json",
+   "producing_command_id": "age_decomposition",
+   "sha256": "8e2956c53e8589c3d64349eabe85b962a69cdd53b77dbae70073bc38ac7af79e",
+   "size_bytes": 2451
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/age_brfss_2022_heart_disease_model.joblib",
+   "producing_command_id": "age_decomposition",
+   "sha256": "d4f84e4e357b0fd8f8cfe9f851ad6715a6b5b92b70f429fd6d19dec7d1dbf1e2",
+   "size_bytes": 3119196
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_brfss_2022_heart_disease_performance.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "e718e4c041381056f2c4dfedf767a6eb105af9bc412a8627524526c125bbbc86",
+   "size_bytes": 1991
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_brfss_2022_heart_disease_predictions.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "c788c8cab9ef5981104d75ea1a7be504e71d598cfe822fa10437f675abaac3df",
+   "size_bytes": 11808552
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/age_cchs_2019_20_diabetes_manifest.json",
+   "producing_command_id": "age_decomposition",
+   "sha256": "a13a77cb1fb2cb2effbb0b9db17113ec1a7f3100de5cec6ac54156525c69e6a1",
+   "size_bytes": 2321
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/age_cchs_2019_20_diabetes_model.joblib",
+   "producing_command_id": "age_decomposition",
+   "sha256": "e0f58c1195cc330459972c9b8abf6f6def9b8fdb4011a9ecd706c18da124ba5e",
+   "size_bytes": 30031
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_cchs_2019_20_diabetes_performance.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "e8f297939b96392c9d591e638669729b900ef7fa700f3dcd736cc4b127d63998",
+   "size_bytes": 2028
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_cchs_2019_20_diabetes_predictions.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "9d4adf7418a051778957da5f9b28b911501ff7ac886397c75ca06c5e10e35c10",
+   "size_bytes": 2753272
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/age_cdc_diabetes_brfss_2015_manifest.json",
+   "producing_command_id": "age_decomposition",
+   "sha256": "5090972fd1158ac9a4d266bea51223768957cbd14e7ed1159c849bfe5559a2b5",
+   "size_bytes": 2195
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/age_cdc_diabetes_brfss_2015_model.joblib",
+   "producing_command_id": "age_decomposition",
+   "sha256": "1d6940411eb4dc2554033b776d86910aac5a741d83c7ed462f6c56444801587b",
+   "size_bytes": 3058866
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_cdc_diabetes_brfss_2015_performance.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "299a8ad712e5238aee8fe3d274ee6583743de327b60037219ca1fa6f9f724ffd",
+   "size_bytes": 1989
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_cdc_diabetes_brfss_2015_predictions.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "039ec7e9e0cd46e183d1aa334fb846539e837bf5675dd6ddb2dbcc5e6a0cd77a",
+   "size_bytes": 5795554
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/age_diabetes_130_readmission_manifest.json",
+   "producing_command_id": "age_decomposition",
+   "sha256": "f35d456bf48f7932bf60babca5e0953dc12ec1b24230d3f8a22516000d610892",
+   "size_bytes": 3402
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/age_diabetes_130_readmission_model.joblib",
+   "producing_command_id": "age_decomposition",
+   "sha256": "d3f1b9b3b15684314bcf91a751b7350d48f1d36bc743d2541edfff281c0aedc8",
+   "size_bytes": 385552014
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_diabetes_130_readmission_performance.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "593d2f4afb9ef5d6a142a459b49ef158fdf38cd13469260215c7265961d12345",
+   "size_bytes": 2053
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_diabetes_130_readmission_predictions.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "14359a8155b029b5b1c64158e83ebd5561f220636448411da61c5ec25008ebf8",
+   "size_bytes": 3323280
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/age_nhanes_2017_18_diabetes_manifest.json",
+   "producing_command_id": "age_decomposition",
+   "sha256": "dcdefbad49c20282dc3125dc9ef225b6605ab162344020affe0151dbc86a8a79",
+   "size_bytes": 2072
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/age_nhanes_2017_18_diabetes_model.joblib",
+   "producing_command_id": "age_decomposition",
+   "sha256": "ee6e180ae658f0f7ffffbf1ff5d24c97b6f83dd309378a509c998ae68ef223af",
+   "size_bytes": 22498
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_nhanes_2017_18_diabetes_performance.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "d94cc77900cb5e1475d4d1c8af45c2b268f68c2a350117199354439213c8b742",
+   "size_bytes": 2016
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:57:21.905525+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/age_nhanes_2017_18_diabetes_predictions.csv",
+   "producing_command_id": "age_decomposition",
+   "sha256": "e179c6cf3d8f7e2f573075a532195a80338d389f40545eeaf77b5127abd4a4c3",
+   "size_bytes": 172335
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_manifest.json",
+   "producing_command_id": "race_decomposition",
+   "sha256": "57965a0b98fea1281e3c9a3a38ed7550587b73768ef5e5e7cd0cd66155a93bca",
+   "size_bytes": 2482
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_model.joblib",
+   "producing_command_id": "race_decomposition",
+   "sha256": "4b89f62d4a9de93789da49ec2833e2a6550d076a0ef40cc001440f298e37c41a",
+   "size_bytes": 3118980
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_performance.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "b4bc3b681e7b28449f5429f920bbfc23918fbbc9d3928ef852044abaf6c1c3e3",
+   "size_bytes": 2022
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_brfss_2022_heart_disease_hispanic_vs_white_predictions.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "1447226acb08a969988f339e99b7f962bb4e5cb4de74b1323f4bb873de3901d7",
+   "size_bytes": 15936531
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/race_brfss_2022_heart_disease_manifest.json",
+   "producing_command_id": "race_decomposition",
+   "sha256": "089e62505629abeaf92121b459d4d10487bfa6bf2671ba415ab3451ca1bd714d",
+   "size_bytes": 2379
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/race_brfss_2022_heart_disease_model.joblib",
+   "producing_command_id": "race_decomposition",
+   "sha256": "2cf3ec84631f9f02bb6723617f085c02934f4735b2d17c15022acaa62849370f",
+   "size_bytes": 3117428
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_manifest.json",
+   "producing_command_id": "race_decomposition",
+   "sha256": "89f30ca85de025cef93f469c921f66ffcabe8e2a833985bd82d2fe8e6d81f62b",
+   "size_bytes": 2497
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_model.joblib",
+   "producing_command_id": "race_decomposition",
+   "sha256": "92265b2dbeae955fbcced25a840bfa0088552c7ecb791b6b4c24f1b651c8445d",
+   "size_bytes": 3118628
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_performance.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "b36825c0f2253250947751bbeaee140d90a7f14ab907b6c27cbe54a6823aa48b",
+   "size_bytes": 2021
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_brfss_2022_heart_disease_multiracial_vs_white_predictions.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "ff80911f81449660e195c30843d57219c51304eb46081f56893dd8b834879c03",
+   "size_bytes": 14752574
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_brfss_2022_heart_disease_performance.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "f301875731303e638d9a39139447e92df340c70a45c572dc8c7bc4cd31a6edc8",
+   "size_bytes": 1972
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_brfss_2022_heart_disease_predictions.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "0d17219beec6fc7c207350a562ac3c45ffcecbcffc35d86b91a187cbc9dc5240",
+   "size_bytes": 14193551
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/race_diabetes_130_readmission_manifest.json",
+   "producing_command_id": "race_decomposition",
+   "sha256": "70f1090b7fbca754642ad4eb48263cea5e6bfda747b3e936ebc0ff41c22a13e6",
+   "size_bytes": 3300
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/race_diabetes_130_readmission_model.joblib",
+   "producing_command_id": "race_decomposition",
+   "sha256": "5efbaa3ba94755b6153c0938e11de2896ed8f6afd78d72d1d42f20029a90d02b",
+   "size_bytes": 5579546
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_diabetes_130_readmission_performance.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "33b92f29019665ee88acbd497fd8ff0ffe9fbd1b9e66318be31e15793fccc017",
+   "size_bytes": 2043
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_diabetes_130_readmission_predictions.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "c90f24325f0af960c000e2e73b21d95dbef76924ddf532f9b7af2a8243e1ccb5",
+   "size_bytes": 4580582
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/race_nhanes_2017_18_diabetes_manifest.json",
+   "producing_command_id": "race_decomposition",
+   "sha256": "10232685ab737412d813b51ace8e6905cdd45180600cb30c4549041e742a729f",
+   "size_bytes": 1980
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/race_nhanes_2017_18_diabetes_model.joblib",
+   "producing_command_id": "race_decomposition",
+   "sha256": "8c38be9fe1063017acc9ad893d511c52b84d8a226f429665aae4054f0ba5fee8",
+   "size_bytes": 19229
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_nhanes_2017_18_diabetes_performance.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "a4808d7f05777964b89b9d5812a1a72302fc3b2e6f34dd70886561c0b67378a8",
+   "size_bytes": 1980
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:04:09.970058+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/race_nhanes_2017_18_diabetes_predictions.csv",
+   "producing_command_id": "race_decomposition",
+   "sha256": "56577a7483475e5891855d11369df7f192b063e8f7ccff13adf8ab10dc217c89",
+   "size_bytes": 145342
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/sex_brfss_manifest.json",
+   "producing_command_id": "sex_brfss",
+   "sha256": "7b341b777415f2286764e794f237426f731b56a406817519d176fcb7cba7011a",
+   "size_bytes": 2423
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/sex_brfss_model.joblib",
+   "producing_command_id": "sex_brfss",
+   "sha256": "47ca0cb097d7eb529a2f174b2df3faa563bb264c46cae6d58fec48da84889d84",
+   "size_bytes": 3123278
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_brfss_performance.csv",
+   "producing_command_id": "sex_brfss",
+   "sha256": "3620d559926539962e08e446c7edc5fcd74b39d4bfb6b4f3fd351c849f5e75f2",
+   "size_bytes": 2041
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:52:59.041367+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_brfss_predictions.csv",
+   "producing_command_id": "sex_brfss",
+   "sha256": "5ea322fda191e00a3bc71f265f0e50d690c07486bef0ac578fb1db94743c975e",
+   "size_bytes": 21172840
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/sex_cchs_manifest.json",
+   "producing_command_id": "sex_cchs",
+   "sha256": "dcacdab646b67373cc0082f40a8093b1e9f12ad27bb9bc753203a094fc179322",
+   "size_bytes": 2274
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/sex_cchs_model.joblib",
+   "producing_command_id": "sex_cchs",
+   "sha256": "dca21dd471cdf80e32dbd24733f99dde1fc32be394f6e5f1cb8b160ad5a5bdc4",
+   "size_bytes": 254363726
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_cchs_performance.csv",
+   "producing_command_id": "sex_cchs",
+   "sha256": "56966e3da3dfa0017cc76b3cc9dd01dad828831fd7594b54d6fce15422835ff0",
+   "size_bytes": 1962
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:54:00.092962+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_cchs_predictions.csv",
+   "producing_command_id": "sex_cchs",
+   "sha256": "6259d91e4b9e94421a73dfeee5de0db202ff974c320376733a5a4a1ad1576caf",
+   "size_bytes": 3944510
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/sex_cdc_manifest.json",
+   "producing_command_id": "sex_cdc",
+   "sha256": "4f6012920b519e28f76e0b9d4d63870b1d461eb5991e4a011e9608b60ddc47a8",
+   "size_bytes": 2130
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/sex_cdc_model.joblib",
+   "producing_command_id": "sex_cdc",
+   "sha256": "805e60a63851aa9af3a2fb83cc2f21294c456a568915f8f95a8328cd3369fd7d",
+   "size_bytes": 3076532
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_cdc_performance.csv",
+   "producing_command_id": "sex_cdc",
+   "sha256": "f9767679f8a007308269c50d9111a3ef6abff37307f342ee3fc1761ab62bc533",
+   "size_bytes": 2008
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:48:26.935391+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_cdc_predictions.csv",
+   "producing_command_id": "sex_cdc",
+   "sha256": "f1c51254e6df7c1a768faeb78ea043aadd278908512facce09c19f4d24b5f437",
+   "size_bytes": 11154315
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/sex_diabetes130_manifest.json",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "736d178a26fb6d5fa5c35a2528035f67641fd670899345a56aa157f83a357ad6",
+   "size_bytes": 3336
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/sex_diabetes130_model.joblib",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "eb5f981534b4f20c89f71edff8bcb49c9febd04d558fe29c00098fd9f3b97e8c",
+   "size_bytes": 5795306
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_diabetes130_performance.csv",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "05f4cee110e0a17619542232d568d1e524e942323ab2bc7fe9edcae1283769a5",
+   "size_bytes": 2010
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:49:51.733403+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_diabetes130_predictions.csv",
+   "producing_command_id": "sex_diabetes130",
+   "sha256": "0f57104560e08fbb4dd18963696703f490b77fa1e6136b08930ae5c867e7e1d8",
+   "size_bytes": 4514000
+  },
+  {
+   "disposition": "generated",
+   "file_type": "json",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "application/json",
+   "path": "results/frozen/sex_nhanes_manifest.json",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "a7f38d344773967d90183c0f30b5023ac4e4e1484648843dcc3b6ab69aaba47d",
+   "size_bytes": 1994
+  },
+  {
+   "disposition": "generated",
+   "file_type": "joblib",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "application/octet-stream",
+   "path": "results/frozen/sex_nhanes_model.joblib",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "f6646a85aa095170e1ac797fea5b08dcd374df3190fc1ca51f061205971c3bf4",
+   "size_bytes": 23367
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_nhanes_performance.csv",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "8408627542c3bc71039f7beaca6ee6d2a9b9d026c2d559b42776529f6c99e365",
+   "size_bytes": 1927
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-09T23:53:14.952671+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/frozen/sex_nhanes_predictions.csv",
+   "producing_command_id": "sex_nhanes",
+   "sha256": "613077bace939cda554830e7666ab2ac633cb65cd2273666bba084765432da5b",
+   "size_bytes": 216664
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/jama_reporting/etable1_subgroup_metrics_source.csv",
+   "producing_command_id": "jama_reporting_sources",
+   "sha256": "cafe0aee40ecd6a239c1cd6a5d60db66fdbecc2c2fcca4ede6e226f267e36fc6",
+   "size_bytes": 35675
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/jama_reporting/etable_calibration_source.csv",
+   "producing_command_id": "jama_reporting_sources",
+   "sha256": "cc83a4fa2a98bd3796e18f8c1e47e8d0eb3df34a821fb5097f5c10827a61989f",
+   "size_bytes": 15200
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/jama_reporting/etable_model_performance_source.csv",
+   "producing_command_id": "jama_reporting_sources",
+   "sha256": "f74a0773935cdf96209ca1d88b923199c80c791c5c0b85e89bcd6784cb7ef1b7",
+   "size_bytes": 12226
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/jama_reporting/figure1_source_values.csv",
+   "producing_command_id": "jama_reporting_sources",
+   "sha256": "7ad6bed055c3e8c90c6c15c08e90809e189102f91a72c3f105c9c2102f201f6b",
+   "size_bytes": 2722
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/jama_reporting/missing_data_flow.csv",
+   "producing_command_id": "jama_reporting_sources",
+   "sha256": "950572ace0b5f9981ce5d6542a02e630d78a66e387dbb0ac18def8c769a9fca0",
+   "size_bytes": 1416
+  },
+  {
+   "disposition": "generated",
+   "file_type": "csv",
+   "finalized_at_utc": "2026-09-10T00:07:07.299327+00:00",
+   "media_type": "application/vnd.ms-excel",
+   "path": "results/jama_reporting/table1_source.csv",
+   "producing_command_id": "jama_reporting_sources",
+   "sha256": "e9150e6b0ec33d256a5f5178174b42dfa8c68128ffcc12366b16802e6b271a2d",
+   "size_bytes": 4075
+  }
+ ],
+ "promotion": {
+  "eligible": true,
+  "performed": false
+ },
+ "protocol": {
+  "calibration": "five_fold_isotonic_fold_ensemble_ensemble_true",
+  "candidate_families": [
+   "logistic_regression",
+   "l1_logistic_regression",
+   "random_forest",
+   "shallow_tree",
+   "xgboost",
+   "calibrated_ensemble"
+  ],
+  "case_mix": "exploratory_point_estimates_no_confidence_intervals",
+  "family_eligibility": "finite mean CV AUROC > 0.5; every family required",
+  "model_selection": "five_fold_stratified_training_only_auroc",
+  "reproducibility_acceptance": {
+   "field_rules": {
+    "continuous_auroc_and_calibrated_score_diagnostics": {
+     "atol": 1e-05,
+     "comparison": "absolute_tolerance",
+     "condition": "no material downstream change",
+     "rtol": 0.0
+    },
+    "direction_and_significance": {
+     "comparison": "exact"
+    },
+    "manuscript_metrics_and_bootstrap_confidence_intervals": {
+     "atol": 1e-12,
+     "comparison": "exact_then_absolute_tolerance",
+     "rtol": 0.0
+    },
+    "operating_threshold": {
+     "comparison": "exact"
+    },
+    "schemas_and_output_paths": {
+     "comparison": "exact"
+    },
+    "selected_model_family": {
+     "comparison": "exact"
+    },
+    "subgroup_and_event_counts": {
+     "comparison": "exact"
+    }
+   },
+   "profile": "fixed_eight_thread_tolerance_based_not_bitwise",
+   "relative_tolerance": 0.0
+  },
+  "survey_weights": "unweighted_sample_specific_analysis; no population-representative claims",
+  "threshold": "training_outcome_prevalence"
+ },
+ "provenance": {
+  "finalized": true,
+  "path": "provenance\\provenance.jsonl",
+  "sha256": "45589caa313810215eb0d765d06baa83ed62c6911237a44721b6c23731d53357",
+  "size_bytes": 403324
+ },
+ "run_id": "20260909T234626Z_5b0145ea3bb0_e89e8377",
+ "schema_version": "2.2.0",
+ "started_at_utc": "2026-09-09T23:46:26.712512+00:00",
+ "status": "complete",
+ "validation": {
+  "expected_outputs_complete": true,
+  "hash_mismatches": [],
+  "live_results_unchanged": true,
+  "missing_outputs": [],
+  "provenance_finalized": true,
+  "status": "passed",
+  "unassociated_outputs": []
+ }
+}

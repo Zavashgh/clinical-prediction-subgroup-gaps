@@ -1,0 +1,16 @@
+dataset,comparison,metric,bayes_adj_gap,ipw_adj_gap,ipw_ci_low,ipw_ci_high,inference_protocol,absolute_diff
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,ppv,-0.0011345299868954495,-0.001134529986895505,,,exploratory_point_estimate_no_confidence_interval,5.551115123125783e-17
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,npv,-0.004733212272460929,-0.00473321227246104,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+Diabetes-130 (readmission),AfricanAmerican_vs_Caucasian,predicted_positive_rate,-0.023824904589247298,-0.02382490458924741,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+BRFSS 2022 (heart disease),Black_vs_White,ppv,-0.008548604091307449,-0.008548604091307505,,,exploratory_point_estimate_no_confidence_interval,5.551115123125783e-17
+BRFSS 2022 (heart disease),Black_vs_White,npv,-0.0005971980995015391,-0.0005971980995016501,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+BRFSS 2022 (heart disease),Black_vs_White,predicted_positive_rate,0.014395698475594743,0.014395698475594798,,,exploratory_point_estimate_no_confidence_interval,5.551115123125783e-17
+BRFSS 2022 (heart disease),Hispanic_vs_White,ppv,0.06779990951374787,0.06779990951374801,,,exploratory_point_estimate_no_confidence_interval,1.3877787807814457e-16
+BRFSS 2022 (heart disease),Hispanic_vs_White,npv,-0.007411914436156963,-0.007411914436156741,,,exploratory_point_estimate_no_confidence_interval,2.220446049250313e-16
+BRFSS 2022 (heart disease),Hispanic_vs_White,predicted_positive_rate,-0.11862244963395085,-0.11862244963395085,,,exploratory_point_estimate_no_confidence_interval,0.0
+BRFSS 2022 (heart disease),Multiracial_vs_White,ppv,0.05259397999701196,0.05259397999701185,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+BRFSS 2022 (heart disease),Multiracial_vs_White,npv,0.004437244307041621,0.00443724430704151,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+BRFSS 2022 (heart disease),Multiracial_vs_White,predicted_positive_rate,-0.06080793792442324,-0.06080793792442313,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16
+NHANES 2017-18 (diabetes),Black_vs_White,ppv,0.0674002254383172,0.06740022543831714,,,exploratory_point_estimate_no_confidence_interval,5.551115123125783e-17
+NHANES 2017-18 (diabetes),Black_vs_White,npv,0.006163702211627431,0.006163702211627431,,,exploratory_point_estimate_no_confidence_interval,0.0
+NHANES 2017-18 (diabetes),Black_vs_White,predicted_positive_rate,-0.08850123987449021,-0.0885012398744901,,,exploratory_point_estimate_no_confidence_interval,1.1102230246251565e-16

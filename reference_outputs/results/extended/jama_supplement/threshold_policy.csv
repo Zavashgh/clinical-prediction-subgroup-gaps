@@ -1,0 +1,6 @@
+dataset,protected_attribute,threshold_protocol,threshold,derivation_partition
+CDC Diabetes (BRFSS 2015),Sex,training_outcome_prevalence,0.1575888633599135,training_set
+Diabetes-130 (readmission),gender,training_outcome_prevalence,0.11265244541301705,training_set
+BRFSS 2022 (heart disease),SEXVAR,training_outcome_prevalence,0.09032157545029328,training_set
+NHANES 2017-18 (diabetes),RIAGENDR,training_outcome_prevalence,0.1796875,training_set
+CCHS 2019-20 (diabetes),DHH_SEX,training_outcome_prevalence,0.09909663290446209,training_set

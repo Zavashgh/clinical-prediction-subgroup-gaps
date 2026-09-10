@@ -1,0 +1,14 @@
+dataset,protected_attribute,comparison_label,group_a,group_b,sensitivity_gap,ci_low,ci_high,significance,analysis_status,display_order,source_result_path
+CDC Diabetes (BRFSS 2015),sex,Male minus Female,Male,Female,-0.0330241553333483,-0.0476034112621346,-0.0187196017059115,significant,primary,1,results/01_cdc_diabetes_summary.csv
+Diabetes-130 (readmission),sex,Male minus Female,Male,Female,-0.0485721372172373,-0.0838250735901975,-0.0109253149757692,significant,primary,2,results/02_diabetes130_summary.csv
+BRFSS 2022 (heart disease),sex,Male minus Female,Male,Female,-0.0223822328826591,-0.0373045804491883,-0.0083000319345078,significant,primary,3,results/03_brfss_summary.csv
+NHANES 2017-18 (diabetes),sex,Male minus Female,Male,Female,0.000562248995984,-0.0834614138330608,0.0894818647136528,not_significant,exploratory,4,results/04_nhanes_summary.csv
+CCHS 2019-20 (diabetes),sex,Male minus Female,Male,Female,-0.0226538831005689,-0.0485949915833414,0.0035753939909246,not_significant,primary,5,results/05_cchs_summary.csv
+CDC Diabetes (BRFSS 2015),age,Youngest minus Oldest,18_44,65_plus,-0.2067650043475823,-0.2405843897108738,-0.1696014327053798,significant,primary,6,results/extended/age_decomposition/age_raw_gaps.csv
+Diabetes-130 (readmission),age,Youngest minus Oldest,under_30,60_plus,0.1036330314790858,-0.0703338987282651,0.2322284396587415,not_significant,primary,7,results/extended/age_decomposition/age_raw_gaps.csv
+BRFSS 2022 (heart disease),age,Youngest minus Oldest,18_44,65_plus,-0.3789721452728539,-0.4199438931098512,-0.3399785295049093,significant,primary,8,results/extended/age_decomposition/age_raw_gaps.csv
+NHANES 2017-18 (diabetes),age,Youngest minus Oldest,under_45,65_plus,-0.3108687183482664,-0.4889174656949733,-0.1304819698914693,significant,exploratory,9,results/extended/age_decomposition/age_raw_gaps.csv
+CCHS 2019-20 (diabetes),age,Youngest minus Oldest,18_34,65_plus,-0.4736145574855252,-0.6722920990175244,-0.2384142975823371,significant,primary,10,results/extended/age_decomposition/age_raw_gaps.csv
+Diabetes-130 (readmission),race/ethnicity,AfricanAmerican minus Caucasian,AfricanAmerican,Caucasian,-0.0399142410069766,-0.0904930888743222,0.0062482685147192,not_significant,primary,11,results/extended/race_decomposition/race_raw_gaps.csv
+BRFSS 2022 (heart disease),race/ethnicity,Black minus White,Black,White,0.0003761027851824,-0.028792689055656,0.0272239988234912,not_significant,primary,12,results/extended/race_decomposition/race_raw_gaps.csv
+NHANES 2017-18 (diabetes),race/ethnicity,Black minus White,Black,White,-0.0107578293091082,-0.1277737074694312,0.1110858565321399,not_significant,exploratory,13,results/extended/race_decomposition/race_raw_gaps.csv
