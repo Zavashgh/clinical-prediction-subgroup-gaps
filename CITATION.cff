@@ -2,8 +2,11 @@ cff-version: 1.2.0
 message: "If you use this software or its analysis outputs, please cite it as below."
 title: "Prevalence, Thresholds, and Subgroup Performance Gaps in Clinical Prediction Models: A Multi-Dataset Analysis"
 type: software
-repository-code: "https://github.com/Zavashgh/clinical-prediction-subgroup-gaps"
 version: "v1.1.0"
+doi: "10.5281/zenodo.22694874"
+date-released: 2026-09-10
+repository-code: "https://github.com/Zavashgh/clinical-prediction-subgroup-gaps"
+url: "https://zenodo.org/records/22694874"
 authors:
   - family-names: Ghorbanpourbaboli
     given-names: Zavash
@@ -16,15 +19,23 @@ authors:
   - family-names: Butler
     given-names: Russell
 license: MIT
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22694874"
+    description: "Version-specific DOI for release v1.1.0"
+  - type: doi
+    value: "10.5281/zenodo.22679528"
+    description: "Concept DOI resolving to the latest version"
 abstract: >-
-  Analysis code, held-out predictions, and reference outputs for a retrospective
-  secondary analysis of five publicly available clinical prediction datasets,
-  examining within-dataset subgroup sensitivity differences across sex, age, and
-  race/ethnicity, and how prevalence standardization and operating thresholds
-  affect their interpretation. All data-derived preprocessing is fitted inside
-  each cross-validation and calibration fold on that fold's training
-  observations only. The Diabetes-130 dataset is partitioned, cross-validated,
-  calibrated, and resampled at the patient level, with uncertainty from a joint
+  Analysis code, frozen held-out predictions, fitted model artifacts, and
+  reference outputs for a retrospective secondary analysis of five publicly
+  available clinical prediction datasets, examining within-dataset subgroup
+  sensitivity differences across sex, age, and race/ethnicity, and how
+  prevalence standardization and operating thresholds affect their
+  interpretation. All data-derived preprocessing is fitted inside each
+  cross-validation and calibration fold on that fold's training observations
+  only. The Diabetes-130 dataset is partitioned, cross-validated, calibrated,
+  and resampled at the patient level, with uncertainty from a joint
   patient-cluster bootstrap.
 keywords:
   - clinical prediction models
